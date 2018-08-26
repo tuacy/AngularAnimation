@@ -1,0 +1,24 @@
+<br>
+<h5>在两个状态之间做动画切换</h5>
+<br>
+<div style="padding: 8px; border: 1px solid #000000; float: left">
+
+    <h5>动画结束保留状态</h5>
+    <br>
+    <div style="width: 200px; height: 200px" [@animationState]="state"></div>
+    <br>
+    <button (click)="onStateAB()">状态A=>状态B</button>
+    <button (click)="onStateBA()" style="margin-left: 8px">状态B=>状态A</button>
+
+</div>
+
+<div style="padding: 8px; border: 1px solid #000000; float: left; margin-left: 8px">
+
+    <h5>动画结束不保留状态</h5>
+    <br>
+    <div style="width: 200px; height: 200px; background-color: #67ee38" [@animationStateNoSave]="stateNoSave"></div>
+    <br>
+    <button (click)="onStateNoSaveAB()">状态A=>状态B</button>
+    <button (click)="onStateNoSaveBA()" style="margin-left: 8px">状态B=>状态A</button>
+
+</div>
