@@ -8,6 +8,7 @@ import {animate, keyframes, state, style, transition, trigger} from '@angular/an
     animations: [
         trigger('flyInOut', [
             state('in', style({transform: 'translateX(0)'})),
+            // 进场动画
             transition('void => *', [
                 animate(300, keyframes([
                     style({opacity: 0, transform: 'translateX(-100%)', offset: 0}),
@@ -16,6 +17,7 @@ import {animate, keyframes, state, style, transition, trigger} from '@angular/an
                     style({opacity: 1, transform: 'translateX(0)', offset: 1.0})
                 ]))
             ]),
+            // 出场动画
             transition('* => void', [
                 animate(300, keyframes([
                     style({opacity: 1, transform: 'translateX(0)', offset: 0}),
