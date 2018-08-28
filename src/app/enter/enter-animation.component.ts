@@ -7,30 +7,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
     styleUrls: ['./enter-animation.component.css'],
     animations: [
         trigger('flyInOut', [
-            state('in', style({transform: 'translateX(0)'})),
-            // 进场动画
-            transition('void => *', [
-                style({transform: 'translateX(-100%)'}),
-                animate(500)
-            ]),
-            // 出场动画
-            transition('* => void', [
-                animate(500, style({transform: 'translateX(100%)'}))
-            ])
-        ]),
-        trigger('scaleInOut', [
-            state('in', style({transform: 'translateX(0)'})),
-            // 进场动画
-            transition('void => *', [
-                style({transform: 'translateX(-100%) scale(0)'}),
-                animate(500)
-            ]),
-            // 出场动画
-            transition('* => void', [
-                animate(500, style({transform: 'translateX(100%) scale(0)'}))
-            ])
-        ]),
-        trigger('opacityInOut', [
+            state('in', style({opacity: 1, transform: 'translateX(0) scale(1)'})),
             // 进场动画
             transition('void => *', [
                 style({opacity: 0, transform: 'translateX(-100%) scale(0)'}),
@@ -38,12 +15,15 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
             ]),
             // 出场动画
             transition('* => void', [
-                animate(500, style({transform: 'translateX(100%) scale(0)'}))
+                animate(500, style({opacity: 0, transform: 'translateX(100%) scale(0)'}))
             ])
         ])
     ]
 })
 export class EnterAnimationComponent implements OnInit {
+
+    show = true;
+    list = ['第一个item', '第一个item', '第一个item'];
 
     constructor() {
     }
@@ -51,4 +31,7 @@ export class EnterAnimationComponent implements OnInit {
     ngOnInit() {
     }
 
+    onEnterOuterSwitch() {
+        this.show = !this.show;
+    }
 }

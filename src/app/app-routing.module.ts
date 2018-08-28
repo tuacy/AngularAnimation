@@ -4,6 +4,8 @@ import {RouterModule, Routes} from '@angular/router';
 import {StateAnimationComponent} from './state/state-animation.component';
 import {EnterAnimationComponent} from './enter/enter-animation.component';
 import {KeyframesAnimationComponent} from './keyframes/keyframes-animation.component';
+import {GroupAnimationComponent} from './group/group-animation.component';
+import {CallbackAnimationComponent} from './callback/callback-animation.component';
 
 
 const appRoutes: Routes = [
@@ -19,6 +21,14 @@ const appRoutes: Routes = [
         path: 'keyframes',
         component: KeyframesAnimationComponent
     },
+    {
+        path: 'group',
+        component: GroupAnimationComponent
+    },
+    {
+        path: 'callback',
+        component: CallbackAnimationComponent
+    },
     {path: '', redirectTo: '/state', pathMatch: 'full'},
 ];
 
@@ -31,7 +41,9 @@ const appRoutes: Routes = [
     declarations: [
         StateAnimationComponent,
         EnterAnimationComponent,
-        KeyframesAnimationComponent
+        KeyframesAnimationComponent,
+        GroupAnimationComponent,
+        CallbackAnimationComponent
     ],
     exports: [
         RouterModule

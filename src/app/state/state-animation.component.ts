@@ -8,15 +8,19 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
     animations: [
         // 动画结束保留状态
         trigger('animationState', [
+            // stateA 状态最终样式
             state('stateA', style({
                 backgroundColor: '#67ee38',
                 transform: 'scale(1)'
             })),
+            // stateB 状态最终样式
             state('stateB', style({
                 backgroundColor: '#4a302c',
                 transform: 'scale(1.1)'
             })),
+            // stateA 到 stateB 状态动画
             transition('stateA => stateB', animate('500ms ease-in')),
+            // stateB 到 stateA 状态动画
             transition('stateB => stateA', animate('500ms ease-out'))
         ]),
         // 动画结束不保留状态
@@ -26,7 +30,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
                     backgroundColor: '#4a302c',
                     transform: 'scale(1.1)'
                 }),
-                animate('500ms ease-in', style({
+                animate('1000ms ease-in', style({
                     backgroundColor: '#67ee38',
                     transform: 'scale(1)'
                 }))
@@ -36,7 +40,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
                     backgroundColor: '#67ee38',
                     transform: 'scale(1)'
                 }),
-                animate('500ms ease-in', style({
+                animate('1000ms ease-in', style({
                     backgroundColor: '#4a302c',
                     transform: 'scale(1.1)'
                 }))

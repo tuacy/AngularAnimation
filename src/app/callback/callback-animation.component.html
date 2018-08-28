@@ -1,0 +1,8 @@
+<br>
+<h5>动画回调(动画开始，动画结束函数回调)</h5>
+<br>
+<div style="width: 200px; height: 200px; background-color: #67ee38" [@flyInOut]="'in'"
+     (@flyInOut.start)="animationStarted($event)"
+     (@flyInOut.done)="animationDone($event)"></div>
+
+<p style="color: #802231">{{message}}</p>

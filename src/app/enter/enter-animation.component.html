@@ -1,23 +1,10 @@
 <br>
-<h5>进场离场动画</h5>
+<h5>入场出场动画</h5>
 <br>
-<div style="padding: 8px; border: 1px solid #000000; float: left">
-    <h5>动画结束保留状态</h5>
-    <br>
-    <div style="width: 200px; height: 200px; background-color: #67ee38" [@flyInOut]="'in'"></div>
-
-</div>
-
-<div style="padding: 8px; border: 1px solid #000000; margin-left: 8px; float: left">
-    <h5>动画结束保留状态</h5>
-    <br>
-    <div style="width: 200px; height: 200px; background-color: #67ee38" [@scaleInOut]></div>
-
-</div>
-
-<div style="padding: 8px; border: 1px solid #000000; margin-left: 8px; float: left">
-    <h5>动画结束保留状态</h5>
-    <br>
-    <div style="width: 200px; height: 200px; background-color: #67ee38" [@opacityInOut]></div>
-
-</div>
+<button (click)="onEnterOuterSwitch()">进场or离场</button>
+<br>
+<ul>
+    <li *ngFor="let item of list">
+        <div *ngIf="show" style="width: 200px; height: 200px; background-color: #67ee38" [@flyInOut]="'in'"></div>
+    </li>
+</ul>
