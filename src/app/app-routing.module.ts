@@ -6,6 +6,9 @@ import {EnterAnimationComponent} from './enter/enter-animation.component';
 import {KeyframesAnimationComponent} from './keyframes/keyframes-animation.component';
 import {GroupAnimationComponent} from './group/group-animation.component';
 import {CallbackAnimationComponent} from './callback/callback-animation.component';
+import {SequenceAnimationComponent} from './sequence/sequence-animation.component';
+import {QueryAnimationComponent} from './query/query-animation.component';
+import {StaggerAnimationComponent} from './stagger/stagger-animation.component';
 
 
 const appRoutes: Routes = [
@@ -29,6 +32,18 @@ const appRoutes: Routes = [
         path: 'callback',
         component: CallbackAnimationComponent
     },
+    {
+        path: 'sequence',
+        component: SequenceAnimationComponent
+    },
+    {
+        path: 'query',
+        component: QueryAnimationComponent
+    },
+    {
+        path: 'stagger',
+        component: StaggerAnimationComponent
+    },
     {path: '', redirectTo: '/state', pathMatch: 'full'},
 ];
 
@@ -43,7 +58,10 @@ const appRoutes: Routes = [
         EnterAnimationComponent,
         KeyframesAnimationComponent,
         GroupAnimationComponent,
-        CallbackAnimationComponent
+        CallbackAnimationComponent,
+        SequenceAnimationComponent,
+        QueryAnimationComponent,
+        StaggerAnimationComponent
     ],
     exports: [
         RouterModule

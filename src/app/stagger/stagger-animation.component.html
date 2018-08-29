@@ -1,0 +1,12 @@
+<br>
+<h5>stagger</h5>
+<br>
+
+<button (click)="toggle()">显示 / 隐藏 Items</button>
+<br>
+<br>
+<div [@listAnimation]="items.length">
+    <div *ngFor="let item of items">
+        {{ item }}
+    </div>
+</div>
