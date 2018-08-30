@@ -10,6 +10,7 @@ import {SequenceAnimationComponent} from './sequence/sequence-animation.componen
 import {QueryAnimationComponent} from './query/query-animation.component';
 import {StaggerAnimationComponent} from './stagger/stagger-animation.component';
 import {ChildAnimationComponent} from './child/child-animation.component';
+import {UseAnimationComponent} from './useanimation/use-animation.component';
 
 
 const appRoutes: Routes = [
@@ -49,6 +50,10 @@ const appRoutes: Routes = [
         path: 'child',
         component: ChildAnimationComponent
     },
+    {
+        path: 'useanimation',
+        component: UseAnimationComponent
+    },
     {path: '', redirectTo: '/state', pathMatch: 'full'},
 ];
 
@@ -67,7 +72,8 @@ const appRoutes: Routes = [
         SequenceAnimationComponent,
         QueryAnimationComponent,
         StaggerAnimationComponent,
-        ChildAnimationComponent
+        ChildAnimationComponent,
+        UseAnimationComponent
     ],
     exports: [
         RouterModule

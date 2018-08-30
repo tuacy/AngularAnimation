@@ -22,14 +22,14 @@ import {animate, animateChild, animation, query, style, transition, trigger, use
             transition('false => true', [
                 style({opacity: 0}),
                 animate(500, style({opacity: 1}))
-            ]),
+            ])/*,
             useAnimation(fadeAnimation, {
                 params: {
                     time: '2s',
                     start: 1,
                     end: 0
                 }
-            })
+            })*/
         ])
     ]
 })
