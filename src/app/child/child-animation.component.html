@@ -1,0 +1,21 @@
+<br>
+<h5>animationChild</h5>
+<br>
+
+<button (click)="exp =! exp">Toggle</button>
+<br>
+<br>
+
+
+<div [@parentAnimation]="exp">
+    <header>Hello</header>
+    <div [@childAnimation]="exp">
+        第一个child
+    </div>
+    <div [@childAnimation]="exp">
+        第二个child
+    </div>
+    <div [@childAnimation]="exp">
+        第三个child
+    </div>
+</div>

@@ -9,6 +9,7 @@ import {CallbackAnimationComponent} from './callback/callback-animation.componen
 import {SequenceAnimationComponent} from './sequence/sequence-animation.component';
 import {QueryAnimationComponent} from './query/query-animation.component';
 import {StaggerAnimationComponent} from './stagger/stagger-animation.component';
+import {ChildAnimationComponent} from './child/child-animation.component';
 
 
 const appRoutes: Routes = [
@@ -44,6 +45,10 @@ const appRoutes: Routes = [
         path: 'stagger',
         component: StaggerAnimationComponent
     },
+    {
+        path: 'child',
+        component: ChildAnimationComponent
+    },
     {path: '', redirectTo: '/state', pathMatch: 'full'},
 ];
 
@@ -61,7 +66,8 @@ const appRoutes: Routes = [
         CallbackAnimationComponent,
         SequenceAnimationComponent,
         QueryAnimationComponent,
-        StaggerAnimationComponent
+        StaggerAnimationComponent,
+        ChildAnimationComponent
     ],
     exports: [
         RouterModule
