@@ -11,17 +11,17 @@ import {animate, query, stagger, style, transition, trigger} from '@angular/anim
                 query(':leave', [
                     // 所有子元素出场动画
                     style({opacity: 1}),
-                    stagger(100, [
+                    stagger('1s', [
                         animate('0.5s', style({opacity: 0}))
                     ])
-                ]),
+                ])/*,
                 query(':enter', [
                     // 所有子元素入场动画
                     style({opacity: 0}),
-                    stagger(100, [
+                    stagger('1s', [
                         animate('0.5s', style({opacity: 1}))
                     ])
-                ])
+                ])*/
             ])
         ])]
 })
